@@ -15,6 +15,25 @@ fetch(`${url}weather?q=istanbul${api}&lang=tr&units=metric`).then( (res) => res.
     maxmin.innerText = `En yüksek: ${Math.round(data.main.temp_max)}°   |   En düşük: ${Math.round(data.main.temp_min)}°`;
     des.innerText = data.weather[0].description.toUpperCase();
     feel.innerHTML = `Hissedilen: ${Math.round(data.main.feels_like)}°`;
+
+    if ((data.weather[0].description) === "karlı" ){
+        document.body.classList.remove("im");
+        document.body.classList.add("snow");
+    } else if ((data.weather[0].description) === "kapalı"){
+        document.body.classList.remove("im");
+        document.body.classList.add("rain");
+    } else if ((data.weather[0].description) === "açık" || (data.weather[0].description) === "az bulutlu" ) {
+        document.body.classList.remove("im");
+        document.body.classList.add("sunny");
+    } else if ((data.weather[0].description) === "parçalı bulutlu" || (data.weather[0].description) === "parçalı az bulutlu" )  {
+        document.body.classList.remove("im");
+        document.body.classList.add("clo");
+    }else if ( (data.weather[0].description) === "kısa süreli hafif yoğunluklu yağmur"  ){
+        document.body.classList.remove("im");
+        document.body.classList.add("rain");
+    }
+    
+
     } );
 
 function valueInput(){
@@ -32,9 +51,21 @@ function valueInput(){
         des.innerText = data.weather[0].description.toUpperCase();
         feel.innerHTML = `Hissedilen: ${Math.round(data.main.feels_like)}°`;
 
-        if ((Math.round(data.main.temp)) < 10 ){
-            
-            alert("havaya dikkat")
+        if ((data.weather[0].description) === "karlı" ){
+            document.body.classList.remove("im");
+            document.body.classList.add("snow");
+        } else if ((data.weather[0].description) === "kapalı"){
+            document.body.classList.remove("im");
+            document.body.classList.add("rain");
+        } else if ((data.weather[0].description) === "açık" || (data.weather[0].description) === "az bulutlu" ) {
+            document.body.classList.remove("im");
+            document.body.classList.add("sunny");
+        } else if ((data.weather[0].description) === "parçalı bulutlu" || (data.weather[0].description) === "parçalı az bulutlu" )  {
+            document.body.classList.remove("im");
+            document.body.classList.add("clo");
+        }else if ( (data.weather[0].description) === "kısa süreli hafif yoğunluklu yağmur"  ){
+            document.body.classList.remove("im");
+            document.body.classList.add("rain");
         }
         
         

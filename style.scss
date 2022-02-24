@@ -25,6 +25,24 @@ body{
     -webkit-backdrop-filter: blur(5px);  
 }
 
+.rain{
+    background-image: url(./image/rain.jpg);
+    backdrop-filter:  blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.sunny{
+    background-image: url(./image/sunny.jpg);
+    backdrop-filter:  blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.clo{
+    background-image: url(./image/clo.jpg);
+    backdrop-filter:  blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
 .city{
     margin-top: 0px;
     color: white;
