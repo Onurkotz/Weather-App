@@ -4,7 +4,6 @@ let des = document.querySelector(".des");
 let maxmin = document.querySelector(".maxmin");
 let feel = document.querySelector(".feel")
 
-
 let url = "https://api.openweathermap.org/data/2.5/"
 let api = "&appid=992c1f2ef9fa5dbd0f8cd57296cac07b"
 
@@ -49,5 +48,3 @@ function valueInput(){
         }
     }     
 }
-
-//            Saat eklemelisin
