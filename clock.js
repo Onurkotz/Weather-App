@@ -17,7 +17,7 @@ function clock(){
         "Cumartesi"
     ]
 
-    hourDom.innerHTML = getClock + "   " + (days[new Date().getDay()]);
+    hourDom.innerHTML = "Saat " + getClock + "   " + "günlerden " (days[new Date().getDay()]);
 
     setTimeout(clock, 1000);
 }
